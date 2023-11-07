@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: dashboard.php"); // Redirect to the dashboard page
             exit(); // Terminate the script
         } else {
-            echo "Incorrect password. Please try again.";
+            echo "Incorrect password. Please try again !!";
         }
     } else {
         echo "Username not found. Please register an account.";
