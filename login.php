@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Incorrect password. Please try again !!";
         }
     } else {
-        echo "Username not found.";
+        echo "Username not found. Please register an account";
     }
 
     $mysqli->close();
