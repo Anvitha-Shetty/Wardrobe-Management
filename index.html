@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('your-background-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px; /* Set a fixed width for the login container */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .register-link {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="login-container">
+    <!-- Your login form goes here -->
     <h2>Login</h2>
-    <form action="login.php" method="post">
-        <label for="login_username">Username:</label>
-        <input type="text" id="login_username" name="login_username" required><br><br>
-        <label for="login_password">Password:</label>
-        <input type="password" id="login_password" name="login_password" required><br><br>
-        <input type="submit" value="Login">
+    <form method="POST" action="">
+      <!-- Your form fields go here -->
+      <input type="text" name="login_username" placeholder="Username">
+      <input type="password" name="login_password" placeholder="Password">
+      <button type="submit">Login</button>
     </form>
 
-    <p>Don't have an account? <a href="register.html">Register here</a></p>
+    <!-- Registration link -->
+    <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+
 </body>
 </html>
