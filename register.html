@@ -2,95 +2,11 @@
 <html>
 <head>
     <title>Register</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            
-            background-image: url('https://images.unsplash.com/photo-1630904989936-da6328c2f92d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: 100% 100%;
-            background-position: cover;
-
-            
-
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            transition: background-image 1s ease; /* Added to arrange content vertically */
-        }
-        backgroundAnimation {
-  from {
-    filter: brightness(100%);
-  }
-  to {
-    filter: brightness(120%);
-  }
-}
-body::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Add a semi-transparent gradient */
-      z-index: -1; /* Place the pseudo-element behind the content */
-    }
-
-
-
-        h2, form, p {
-            text-align: center;
-            margin-bottom: 10px; /* Added for spacing */
-        }
-
-        form {
-            max-width: 300px;
-            width: 100%;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            text-align: left;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            padding: 10px;
-            background-color: orange;
-            color: black;
-            border-radius: 7px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: green;
-        }
-
-        p a {
-            color: blue;
-        }
-
-        p a:hover {
-            text-decoration: underline;
-            color:red;
-        }
-    </style>
 </head>
 <body>
     <h2>Register</h2>
     <form action="register.php" method="post">
+    <link rel="stylesheet" type="text/css" href="register.css">
         <label for="register_username">Username:</label>
         <input type="text" id="register_username" name="register_username" required>
         <label for="register_password">Password:</label>
@@ -98,12 +14,12 @@ body::before {
         <input type="submit" value="Register">
     </form>
 
-    <p>Already have an account? <a href="index.html">Login here</a></p>
+    <p class="login-link">Already have an account? <a href="index.html">Login here</a></p>
+
     <script>
         // List of background images
         const backgroundImages = [
           'https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-          'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           'https://images.unsplash.com/photo-1630904989936-da6328c2f92d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           // Add more image URLs as needed
         ];
@@ -118,7 +34,6 @@ body::before {
         // Change background on page load and every 5 seconds (adjust as needed)
         changeBackground();
         setInterval(changeBackground, 5000);
-      </script>     
-</body>
+      </script>
+    </body>
 </html>
-

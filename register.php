@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['register_password'];
 
     // Connect to the MySQL database (replace with your own database credentials)
-    $mysqli = new mysqli("localhost", "root", "anvitha@2003", "user_db");
+    $mysqli = new mysqli('2401:4900:62af:bf5:59c5:fecc:73e8:8c5f', "root", "anvitha@2003", "user_db");
 
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
