@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+</head>
+<body>
+    <h1>Add New Item</h1>
+
+    <form action="process_upload.php" method="post" enctype="multipart/form-data">
+        <label for="image">Cloth Image:</label>
+        <input type="file" name="image" accept="image/*" required>
+        
+        <label for="color">Color:</label>
+        <input type="text" name="color" required>
+
+        <label for="occasion">Occasion:</label>
+        <input type="text" name="occasion" required>
+
+        <label for="weather">Weather:</label>
+        <input type="text" name="weather" required>
+
+        <button type="submit">Upload Item</button>
+    </form>
+</body>
+</html>
