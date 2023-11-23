@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Items</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="add_items.css">
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="add_items.js"></script>
+
+  <title>Add Items</title>
 </head>
 <body>
-    <h1>Add New Item</h1>
+    <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <h5 class="card-header">Add New Item</h5>
+          <div class="card-body">
 
-    <form action="process_upload.php" method="post" enctype="multipart/form-data">
-        <label for="image">Cloth Image:</label>
-        <input type="file" name="image" accept="image/*" required>
-        
-        <label for="color">Color:</label>
-        <input type="text" name="color" required>
+            <!-- Form inside card body -->
+            <form id="upload-form" action="add_items.php" method="post" enctype="multipart/form-data">
 
-        <label for="occasion">Occasion:</label>
-        <input type="text" name="occasion" required>
-
-        <label for="weather">Weather:</label>
-        <input type="text" name="weather" required>
-
-        <button type="submit">Upload Item</button>
-    </form>
+                <div class="form-group">
+                  <label for="image" class="form-label">Cloth Image:</label>
+                  <input type="file" name="image" class="form-control-file" accept="image/*" required>
+                </div>
+              
+                <div class="form-group">  
+                  <label for="color" class="form-label">Color:</label>
+                  <input type="text" name="color" class="form-control" required>
+                </div>
+              
+                <div class="form-group">
+                  <label for="occasion" class="form-label">Occasion:</label>
+                  <input type="text" name="occasion" class="form-control" required>
+                </div>
+              
+                <div class="form-group">
+                  <label for="weather" class="form-label">Weather:</label> 
+                  <input type="text" name="weather" class="form-control" required> 
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Upload Item</button>
+              
+              </form>
+                
 </body>
 </html>

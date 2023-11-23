@@ -46,6 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     if ($mysqli->query($query) === TRUE) {
+
+
+        $_SESSION['upload_success'] = 'Item uploaded successfully!';
+
+        
         // Redirect to the user's home page or a confirmation page
         header("Location: dashboard.html");
         exit();
