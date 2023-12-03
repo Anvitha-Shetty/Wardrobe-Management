@@ -18,6 +18,29 @@
   <title>Add Items</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">My Profile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="dashboard1.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="add_items.html">Add Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Outfit Generator</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
     <div class="container mt-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
@@ -29,10 +52,15 @@
             <form id="upload-form" action="add_items.php" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
-                  <label for="image" class="form-label">Cloth Image:</label>
-                  <input type="file" name="image" class="form-control-file" accept="image/*" required>
+                  <label for="image_path" class="form-label">Cloth Image:</label>
+                  <input type="file" name="image_path" class="form-control-file" accept="image/*" required>
                 </div>
-              
+
+                <div class="form-group">  
+                  <label for="cloth_name" class="form-label">Cloth Name:</label>
+                  <input type="text" name="cloth_name" class="form-control" required>
+                </div>
+
                 <div class="form-group">  
                   <label for="color" class="form-label">Color:</label>
                   <input type="text" name="color" class="form-control" required>
@@ -44,9 +72,14 @@
                 </div>
               
                 <div class="form-group">
-                  <label for="weather" class="form-label">Weather:</label> 
-                  <input type="text" name="weather" class="form-control" required> 
-                </div>
+                  <label for="category" class="form-label">Category:</label>
+                  <select name="category" class="form-control" required>
+                      <option value="tops">Tops</option>
+                      <option value="bottoms">Bottoms</option>
+                      <option value="dresses">Dresses</option>
+                      <option value="footwear">Footwear</option>
+                  </select>
+              </div>
                 
                 <button type="submit" class="btn btn-primary">Upload Item</button>
               
