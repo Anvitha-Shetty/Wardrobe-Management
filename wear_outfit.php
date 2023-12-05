@@ -58,10 +58,6 @@ foreach ($outfitDetails['clothes'] as $cloth) {
     }
 }
 
-    // Insert into the outfit_calendar table
-    $insert_calendar_query = "INSERT INTO outfit_calendar (user_id, outfit_date, outfit_id) VALUES ('$user_id', NOW(), '$outfit_id')";
-    $mysqli->query($insert_calendar_query);
-
     // Respond to the client with success message
     echo json_encode(['status' => 'success', 'message' => 'Outfit details stored successfully']);
 } else {

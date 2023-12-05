@@ -19,13 +19,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-light" aria-current="page" href="dashboard1.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="add_items.html">Add Items</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="outfit_gen1.php">Outfit Generator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="outfit_cal.php">Outfit Calendar</a> <!-- Add this line -->
                     </li>
                 </ul>
                 <ul class="navbar-nav">
