@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     // Insert into the outfit table
-    $insert_outfit_query = "INSERT INTO outfit (user_id) VALUES ('$user_id')";
+    $insert_outfit_query = "INSERT INTO outfit (user_id, outfit_date) VALUES ('$user_id', NOW())";
     $mysqli->query($insert_outfit_query);
 
     // Get the ID of the last inserted outfit
